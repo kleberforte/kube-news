@@ -5,7 +5,7 @@ peline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("kleberforte/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
+                    dockerapp = docker.build("kleberfforte/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
                 }                
             }
         }
