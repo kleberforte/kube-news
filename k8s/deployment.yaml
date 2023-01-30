@@ -48,6 +48,9 @@ spec:
     metadata:
       labels:
         app: web
+      annotations.io/scrape: "true"
+      annotations.io/port: "8080"
+      annotations.io/path: "/metrics"
     spec:
       containers:
         - name: web
