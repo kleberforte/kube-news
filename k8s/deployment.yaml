@@ -48,9 +48,10 @@ spec:
     metadata:
       labels:
         app: web
-      annotations.io/scrape: "true"
-      annotations.io/port: "8080"
-      annotations.io/path: "/metrics"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
         - name: web
